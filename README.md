@@ -1,6 +1,10 @@
 # pycudasift - Python binding for CudaSift 
 How to install the package:
 ```
+# set up dependencies
+pip3 install -U pip wheel setuptools
+pip3 install Cython numpy pandas
+# building wheel
 python3 setup.py bdist_wheel
 cd dist
 pip3 install *.whl
