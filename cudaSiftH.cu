@@ -90,10 +90,6 @@ void ExtractSift(SiftData &siftData, CudaImage &img, int numOctaves, double init
   if (siftData.h_data)
     safeCall(cudaMemcpy(siftData.h_data, siftData.d_data, sizeof(SiftPoint)*siftData.numPts, cudaMemcpyDeviceToHost));
 #endif
-  double totTime = timer.read();
-#ifndef VERBOSE
-  printf("Total time incl memory =      %.2f ms\n", totTime);
-#endif
 }
 
 extern double DynamicMain(CudaImage &img, SiftData &siftData, int numOctaves, double initBlur, float thresh, float lowestScale, float edgeLimit, float *memoryTmp);
