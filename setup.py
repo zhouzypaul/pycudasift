@@ -26,7 +26,7 @@ class BuildExt(build_ext):
     def finalize_options(self):
         build_ext.finalize_options(self)
         if self.cuda_prefix is None:
-            self.cuda_prefix = os.environ.get("CUDA_PREFIX", "/gpfs/rt/7.2/opt/cuda/11.1/cuda/")
+            self.cuda_prefix = os.environ.get("CUDA_PREFIX", "/gpfs/rt/7.2/opt/cuda/11.1.1/cuda/")
         if self.cuda_version is None:
             self.cuda_version = os.environ.get("CUDA_VERSION", "75")
         if self.cuda_arch is None:
