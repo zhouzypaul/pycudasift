@@ -1,4 +1,10 @@
 # pycudasift - Python binding for CudaSift 
+On Oscar you need to use an older GPU architecture to build this package: e.g. Tesla P100
+```
+interact -q gpu-debug -g 1  # this queue gives you the Tesla P100
+module load cuda/10.2
+```
+
 How to install the package:
 ```
 # set up dependencies
